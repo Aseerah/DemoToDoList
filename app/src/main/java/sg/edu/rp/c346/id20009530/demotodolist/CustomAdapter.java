@@ -1,6 +1,7 @@
 package sg.edu.rp.c346.id20009530.demotodolist;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,10 @@ public class CustomAdapter extends ArrayAdapter {
         // Set values to the TextView to display the corresponding information
         tvTitle.setText(currentVersion.getTitle());
         tvDate.setText(currentVersion.toString());
+
+        if(currentVersion.getDate().get(Calendar.YEAR) == 2021){
+            tvDate.setTextColor(Color.RED);
+        }
 
 
         return rowView;
